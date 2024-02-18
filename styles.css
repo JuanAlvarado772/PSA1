@@ -1,213 +1,271 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+}
+
+body {
+  background: #223;
+  min-height: 100vh;
+  font-family: "Geist Sans", sans-serif;
+  padding: 50px
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
   }
-  
-  body {
-    background: #223;
-    min-height: 100vh;
-    font-family: "Geist Sans", sans-serif;
-    padding: 50px
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
   }
-  
-  h1 {
-    position: relative;
-    width: 400px;
-    top: 10%;
-    font-size: 35px;
-    margin: auto;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 10px;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
   }
-  
+}
+
+
+h1 {
+  position: relative;
+  width: 400px;
+  top: 10%;
+  font-size: 35px;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+
+#parentcontainer {
+  position: relative;
+  font-weight: bold;
+  background: #E6E6FA;
+  margin: auto;
+  top: 10%;
+  height: 860px;
+  width: 450px;
+  padding: 10px;
+  border-radius: 15px;
+  border-bottom: 9px solid 	#483D8B;
+  border-right: 9px solid 	#483D8B;
+  font-size: 1.5rem;
+}
+@media (max-width: 28.75em) {
   #parentcontainer {
-    position: relative;
-    font-weight: bold;
-    background: #E6E6FA;
-    margin: auto;
-    top: 10%;
-    height: 860px;
-    width: 450px;
-    padding: 10px;
-    border-radius: 15px;
-    border-bottom: 9px solid 	#483D8B;
-    border-right: 9px solid 	#483D8B;
+    width: 350px;
+    height: 950px;
   }
-  #container {
-    width: 100%;
-    position: relative;
+}
+@media (max-width: 61.25em) {
+  #parentcontainer {
+    width: 350px;
+    height: 950px;
   }
-  #toc {
-    height: 400px;
+}
+@media (max-width: max-width: 75em) {
+  #parentcontainer {
+    width: 350px;
+    height: 950px;
   }
+}
+
+#container {
+  width: 100%;
+  font-size: 2rem;
+  position: relative;
+}
+#toc {
+  height: 400px;
+}
+
+.box1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.left {
+  height: 40px;
+  background: orange;
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.right {
+  height: 40px;
+  background: orange;
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+  position: relative;
+}
+#check {
+  display: inline-block;
+  position: relative;
+}
+#search-input {
+  width: 250px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+ 
   
-  .box1 {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    position: relative;
-  }
-  
-  .left {
-    height: 40px;
-    background: orange;
-    padding: 10px;
-    width: 200px;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  .right {
-    height: 40px;
-    background: orange;
-    padding: 10px;
-    width: 200px;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  #check {
-    display: inline-block;
-    position: relative;
-  }
-  #search-input {
-    width: 250px;
-    height: 30px;
-    padding: 6px;
-    border-radius: 5px;
-    border: none;
-    
-  }
-  #search-button {
-    width: 150px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-  }
-  #search-button:hover {
-    cursor: pointer;
-  }
-  
-  #pokemon-name {
-    color: black;
-    font-size: 25px;
-    margin-top: 20px;
-  }
-  #pokemon-id {
-    font-size: 25px;
-  }
-  
-  #sprite-container {
-   width: 430px;
-   height: 200px;
-   margin-bottom: -450px
-  
-  }
-  
-  #wei {
-    display: none;
-  }
-  #hei {
-    display: none;
-  }
-  #pn {
-    display: none;
-  }
-  
-  #sprite {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    margin-left: 115px;
-  }
-  #bug {
-    background: #556B2F;
-    color: white;
-    padding: 5px;
-  }
-  #dark {
-    background: black;
-    color: white;
-    padding: 5px;
-  }
-  #dragon {
-    background:#66bfbf;
-    color: black;
-    padding: 5px;
-  }
-  #electric {
-    background: #fdb44b;
-    color: white;
-    padding: 5px;
-  }
-  #fairy {
-    background: #c3195d;
-    color: white;
-    padding: 5px;
-  }
-  #fighting {
-    background: #ff7e67;
-    color: white;
-    padding: 5px;
-  }
-  #fire {
-    background: red;
-    color: white;
-    padding: 5px;
-  }
-  #flying {
-    background: #596e79;
-    color: white;
-    padding: 5px;
-  }
-  #ghost {
-    background: #24527a;
-    color: white;
-    padding: 5px;
-  }
-  #grass {
-    background: #42b883;
-    color: white;
-    padding: 5px;
-  }
-  #ground {
-    background: brown;
-    color: white;
-    padding: 5px;
-  }
-  #ice {
-    background: #00bbf0;
-    color: black;
-    padding: 5px;
-  }
-  #normal {
-    background: #fdc57b; 
-    color: black;
-    padding: 5px;
-  }
-  #poison {
-    background:#27296d;  
-    color: white;
-    padding: 5px;
-  }
-  #psychic {
-    background:pink;  
-    color: black;
-    padding: 5px;
-  }
-  #rock {
-    background: #402a23;
-    color: white;
-    padding: 5px;
-  }
-  #steel {
-    background: #4c9173;
-    color: white;
-    padding: 5px;
-  
-  }
-  #water {
-    background: #5f5dbd;
-    color: white;
-    padding: 5px;
-  }
+}
+#search-button {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1rem;
+}
+#search-button:hover {
+  cursor: pointer;
+}
+
+#pokemon-name {
+  color: black;
+  font-size: 25px;
+  margin-top: 20px;
+}
+#pokemon-id {
+  font-size: 25px;
+}
+
+#sprite-container {
+ width: 430px;
+ height: 200px;
+ margin-bottom: -450px
+
+}
+
+#wei {
+  display: none;
+}
+#hei {
+  display: none;
+}
+#pn {
+  display: none;
+}
+
+#sprite {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-left: 115px;
+}
+#bug {
+  background: #556B2F;
+  color: white;
+  padding: 5px;
+}
+#dark {
+  background: black;
+  color: white;
+  padding: 5px;
+}
+#dragon {
+  background:#66bfbf;
+  color: black;
+  padding: 5px;
+}
+#electric {
+  background: #fdb44b;
+  color: white;
+  padding: 5px;
+}
+#fairy {
+  background: #c3195d;
+  color: white;
+  padding: 5px;
+}
+#fighting {
+  background: #ff7e67;
+  color: white;
+  padding: 5px;
+}
+#fire {
+  background: red;
+  color: white;
+  padding: 5px;
+}
+#flying {
+  background: #596e79;
+  color: white;
+  padding: 5px;
+}
+#ghost {
+  background: #24527a;
+  color: white;
+  padding: 5px;
+}
+#grass {
+  background: #42b883;
+  color: white;
+  padding: 5px;
+}
+#ground {
+  background: brown;
+  color: white;
+  padding: 5px;
+}
+#ice {
+  background: #00bbf0;
+  color: black;
+  padding: 5px;
+}
+#normal {
+  background: #fdc57b; 
+  color: black;
+  padding: 5px;
+}
+#poison {
+  background:#27296d;  
+  color: white;
+  padding: 5px;
+}
+#psychic {
+  background:pink;  
+  color: black;
+  padding: 5px;
+}
+#rock {
+  background: #402a23;
+  color: white;
+  padding: 5px;
+}
+#steel {
+  background: #4c9173;
+  color: white;
+  padding: 5px;
+
+}
+#water {
+  background: #5f5dbd;
+  color: white;
+  padding: 5px;
+}
