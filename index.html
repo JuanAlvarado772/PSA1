@@ -1,0 +1,61 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles.css" rel="stylesheet"> 
+    <title>Pokémon Search App</title>
+  </head>
+  <body>
+    <h1>Pokémon Search App</h1>
+    <div id="parentcontainer">
+      <h2>Search for Pokémon Name or ID</h2>
+      <div id="check">
+      <input id="search-input" type="text" required></input>
+      <button id="search-button">Check</button>
+      </div>
+      <div id="toc">
+      <div id="result">
+        <p id="pokemon-name"></p>
+        <p id="pokemon-id"></p>
+        <p id="weight"></p>
+        <p id="height"></p>
+      </div>
+        <div id="img"></div>
+        <div id="types"></div>
+      </div>
+      <div id="container">
+        <div id="second-container" class="box1">
+          <div id="base" class="left box1">Base</div>
+          <div id="stats" class="right box1">Stats</div>
+        </div>
+        <div id="second-container" class="box1">
+          <div class="left box1">HP</div>
+          <div id="hp" class="right box1"></div>
+        </div>
+        <div id="second-container" class="box1">
+          <div  class="left box1">Attack</div>
+          <div  id="attack" class="right box1"></div>
+        </div>
+        <div id="second-container" class="box1">
+          <div  class="left box1">Defense</div>
+          <div  id="defense" class="right box1"></div>
+        </div>
+        <div id="second-container" class="box1">
+          <div class="left box1">Sp. Attack</div>
+          <div id="special-attack" class="right box1"></div>
+        </div>
+        <div id="second-container" class="box1">
+          <div class="left box1">Sp. Defense</div>
+          <div id="special-defense" class="right box1"></div>
+        </div>
+        <div id="second-container" class="box1">
+          <div class="left box1">Speed</div>
+          <div id="speed" class="right box1"></div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
